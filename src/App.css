@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair%20Display");
+/** Common CSS Styles **/
+.relative-position {
+  position: relative;
+}
+
+.heading-text {
+  font-family: "Playfair Display";
+  color: white;
+}
+
+.subheading-text {
+  font-weight: 300;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+}
+
+/** NavBar CSS Styles **/
+.navbar-position {
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.fixed-header {
+  position: fixed;
+  transform: translate3d(0, -100%, 0);
+  -webkit-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  padding: 24.5px 0;
+  background: var(--secondary-color);
+  opacity: 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.41);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.fixed-header.show-fixed {
+  transform: none;
+  -ms-transform: none;
+  opacity: 1;
+}
+
+.header-navbar ul li a {
+  color: #464646;
+  font-weight: 300;
+}
+
+.footer-navbar ul li a {
+  color: #464646;
+  font-weight: 100;
+}
+
+@media (min-width: 992px) {
+  .header-navbar ul li {
+    position: relative;
+    display: block;
+    color: #ffffff;
+    transition: 0.5s;
+  }
+
+  .header-navbar ul li::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 90%;
+    left: 0;
+    background: cadetblue;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  .header-navbar ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.header-navbar ul li a:hover,
+.footer-navbar ul li a:hover {
+  color: cadetblue;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.footer-navbar ul {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.footer-navbar ul li {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  float: none;
+}
+
+.footer-navbar ul li a {
+  padding: 0px 12px;
+  border-left: 1px solid #464646;
+  margin: 0 auto;
+  font-size: 17px;
+  text-transform: uppercase;
+  line-height: 22px;
+  font-weight: 300;
+}
+
+.footer-navbar-height {
+  height: 50px;
+}
+
+
+
+.footer-navbar-nav .nav-link {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+/** Contact Card CSS Styles **/
+.contact-card-position {
+  position: absolute;
+  right: 12.5vw;
+  z-index: 2;
+  background-color: rgba(253, 253, 252, 0.85);
+  width: 300px;
+  bottom:0;
+}
+
+.contact-card-pic {
+  width: 200px;
+  height: 300px;
+  display: block;
+  margin: auto;
+}
+
+/** About Me Pic CSS Styles **/
+.about-me-pic {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+/** Image Carosel CSS Styles **/
+.image-carosel-motto {
+  position: absolute;
+  z-index: 2;
+  color: white;
+}
+
+.slide-container {
+  width: 100%;
+  margin: auto;
+}
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
+.each-fade {
+  display: flex;
+}
+
+.each-fade .image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.each-fade .image-container img {
+  width: 100%;
+}
+
+.each-fade h2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #adceed;
+}
+
+/** Main Page Description CSS Styling **/
+.contact-info {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.contact-info li {
+  vertical-align: middle;
+  padding: 10px 0 10px 0;
+}
+
+.contact-info li .contact-type {
+  color: #333333;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 0px 10px 0 0;
+  font-weight: 700;
+}
+
+/** Search For Sale Form CSS Styling **/
+.search-form-container {
+  border: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.search-form-heading {
+  width: 90%;
+  border-bottom: 1px solid #ccc;
+  margin: 0 auto;
+  padding: 37px 0px 14px;
+}
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+} */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 992px) {
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+.leaflet-popup-content {
+  margin: 13px 19px;
+  line-height: 1.4;
+  width: 300px;
+}
+
+.loading-page {
+  width: 100%;
+  height: 300px;
+  position: relative;
+
+}
+
+.spinner-container {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.9);
+}
+
+.nav-pills>.nav-item>.nav-link.active {
+  background-color: cadetblue;
+}
+
+.nav-pills>.nav-item a {
+  color: black;
+}
+
+.icon-button {
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  box-shadow: none;
+  color: black;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  color: black;
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  position: fixed; /* Stay in place */
+  z-index: 10000; /* Stay on top */
+  top: 52px; /* Stay at the top */
+  left: 0;
+  background-color: #ffffff; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenavOverlay {
+  height: 100%; /* 100% Full-height */
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Stay on top */
+  top: 52px; /* Stay at the top */
+  left: 0;
+  background-color: rgb(0,0,0); /* Black*/
+  opacity: 0.5;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 2s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  color: #464646;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: cadetblue;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+html,body
+{
+    overflow-x: hidden;
+    font-family: 'Noto Sans KR';
+    color: #464646
+}
+
+.cadet-blue {
+  color: cadetblue;
+}
+
+.bottom-border-gray {
+  border-bottom: 1px solid #cccccc;
+}
+
+.cta-list {
+  max-width: 360px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+.cta-list a {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-list a::before {
+  content: '';
+  position: absolute;
+  bottom: -21px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: calc(100% - 40px);
+  height: 18px;
+  border: solid 2px cadetblue;
+  border-top: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-list a::after {
+  content: '';
+  position: absolute;
+  top: -21px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: calc(100% - 40px);
+  height: 18px;
+  border: solid 2px cadetblue;
+  border-bottom: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-list a:hover::after {
+  top: -31px;
+  opacity: 1;
+}
+
+.cta-list a:hover::before {
+  bottom: -31px;
+  opacity: 1;
+}
+
+.cta-list a:hover 
+.cta-label span {
+  color: #464646 !important;
+}
