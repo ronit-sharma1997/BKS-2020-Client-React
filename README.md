@@ -1,6 +1,9 @@
 # Responsive Web App for Brij K. Sharma Real Estate Agent DDS Real Estate
 
-This web app was created using React.js and some awesome libraries along the way. The backend was developed using API Gateway and AWS Lambdas. The website is hosted using AWS Amplify. Sending emails from the web app was done thanks to SES (Simple Email Service).
+This web app was created using React.js and some awesome libraries along the way. The backend was developed using API Gateway and AWS Lambdas along with the Realtor.Com API. The website is hosted using AWS Amplify. Sending emails from the web app was done thanks to SES (Simple Email Service).
+
+<img width="1440" alt="Screen Shot 2021-03-05 at 4 27 14 PM" src="https://user-images.githubusercontent.com/20268204/110175477-d2024b00-7dcf-11eb-9de0-25332333a984.png">
+
 
 ## Available Scripts
 
